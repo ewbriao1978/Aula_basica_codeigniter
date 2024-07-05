@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Controllers;
+use App\Models\AutomoveisModel;
 
 class Home extends BaseController
 {
@@ -31,6 +32,19 @@ class Home extends BaseController
         
 
         return view('showformulario',$data);
+    }
+
+    public function listarAutomoveis() : void
+    {   
+        $automoveis_model = new AutomoveisModel;
+        
+        $data = $automoveis_model->findAll();
+
+        print_r($data);
+
+
+        //$data['var'] = " Minha view de listagem";
+        //return view('listarAutomoveis',$data);
     }
 
 }

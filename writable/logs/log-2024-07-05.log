@@ -1,0 +1,50 @@
+ERROR - 2024-07-05 17:45:52 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /home/eduardo/sources/codeigniter/AulaCodeIgniter3C/projeto_aula/system/Database/MySQLi/Connection.php:186
+Stack trace:
+#0 /home/eduardo/sources/codeigniter/AulaCodeIgniter3C/projeto_aula/system/Database/MySQLi/Connection.php(186): mysqli->real_connect()
+#1 /home/eduardo/sources/codeigniter/AulaCodeIgniter3C/projeto_aula/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/eduardo/sources/codeigniter/AulaCodeIgniter3C/projeto_aula/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/eduardo/sources/codeigniter/AulaCodeIgniter3C/projeto_aula/system/Database/BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query()
+#4 /home/eduardo/sources/codeigniter/AulaCodeIgniter3C/projeto_aula/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/eduardo/sources/codeigniter/AulaCodeIgniter3C/projeto_aula/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#6 /home/eduardo/sources/codeigniter/AulaCodeIgniter3C/projeto_aula/app/Controllers/Home.php(41): CodeIgniter\BaseModel->findAll()
+#7 /home/eduardo/sources/codeigniter/AulaCodeIgniter3C/projeto_aula/system/CodeIgniter.php(933): App\Controllers\Home->listarAutomoveis()
+#8 /home/eduardo/sources/codeigniter/AulaCodeIgniter3C/projeto_aula/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#9 /home/eduardo/sources/codeigniter/AulaCodeIgniter3C/projeto_aula/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/eduardo/sources/codeigniter/AulaCodeIgniter3C/projeto_aula/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 /home/eduardo/sources/codeigniter/AulaCodeIgniter3C/projeto_aula/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/eduardo/sources/codeigniter/AulaCodeIgniter3C/projeto_aula/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#13 /home/eduardo/sources/codeigniter/AulaCodeIgniter3C/projeto_aula/system/rewrite.php(44): require_once('...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /home/eduardo/sources/codeigniter/AulaCodeIgniter3C/projeto_aula/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/eduardo/sources/codeigniter/AulaCodeIgniter3C/projeto_aula/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/eduardo/sources/codeigniter/AulaCodeIgniter3C/projeto_aula/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/eduardo/sources/codeigniter/AulaCodeIgniter3C/projeto_aula/system/Database/BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query()
+#3 /home/eduardo/sources/codeigniter/AulaCodeIgniter3C/projeto_aula/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/eduardo/sources/codeigniter/AulaCodeIgniter3C/projeto_aula/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#5 /home/eduardo/sources/codeigniter/AulaCodeIgniter3C/projeto_aula/app/Controllers/Home.php(41): CodeIgniter\BaseModel->findAll()
+#6 /home/eduardo/sources/codeigniter/AulaCodeIgniter3C/projeto_aula/system/CodeIgniter.php(933): App\Controllers\Home->listarAutomoveis()
+#7 /home/eduardo/sources/codeigniter/AulaCodeIgniter3C/projeto_aula/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#8 /home/eduardo/sources/codeigniter/AulaCodeIgniter3C/projeto_aula/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/eduardo/sources/codeigniter/AulaCodeIgniter3C/projeto_aula/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 /home/eduardo/sources/codeigniter/AulaCodeIgniter3C/projeto_aula/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#11 /home/eduardo/sources/codeigniter/AulaCodeIgniter3C/projeto_aula/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#12 /home/eduardo/sources/codeigniter/AulaCodeIgniter3C/projeto_aula/system/rewrite.php(44): require_once('...')
+#13 {main}
+CRITICAL - 2024-07-05 17:45:52 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: listar]
+in SYSTEMPATH/Database/BaseConnection.php on line 467.
+ 1 SYSTEMPATH/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 5 APPPATH/Controllers/Home.php(41): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->listarAutomoveis()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/eduardo/sources/codeigniter/AulaCodeIgniter3C/projeto_aula/public/index.php')
