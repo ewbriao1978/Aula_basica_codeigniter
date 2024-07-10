@@ -44,4 +44,27 @@ class Home extends BaseController
         return view('listarAutomoveis',$data);
     }
 
+    public function showFormInsert() : string
+    {
+        return view('form_insert');
+    }
+
+    public function salvarAutomoveis() : void
+    {
+        $data = array(
+            'marca' => $this->request->getVar('marca_input'),
+            'modelo' => $this->request->getVar('modelo_input'),
+            'km' => $this->request->getVar('km_input'),
+            'ano' => $this->request->getVar('ano_input'),
+            'preco' => $this->request->getVar('preco_input')
+        );
+
+        $automoveis_model = new AutomoveisModel;        
+        $automoveis_model->insert($data);
+        echo "Dados inseridos com sucesso";
+
+
+    }
+
+
 }
