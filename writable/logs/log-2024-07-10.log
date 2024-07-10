@@ -41,3 +41,36 @@ in APPPATH/Views/listarAutomoveis.php on line 25.
  8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
  9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
 10 SYSTEMPATH/rewrite.php(44): require_once('/home/eduardo/sources/codeigniter/AulaCodeIgniter3C/projeto_aula/public/index.php')
+CRITICAL - 2024-07-10 12:24:01 --> ParseError: syntax error, unexpected identifier "submit", expecting "," or ";"
+[Method: GET, Route: listar]
+in APPPATH/Views/listarAutomoveis.php on line 32.
+ 1 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/Home.php(44): view()
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->listarAutomoveis()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/eduardo/sources/codeigniter/AulaCodeIgniter3C/projeto_aula/public/index.php')
+CRITICAL - 2024-07-10 12:35:06 --> TypeError: App\Controllers\Home::removerAuto(): Return value must be of type string, CodeIgniter\HTTP\RedirectResponse returned
+[Method: POST, Route: remover]
+in APPPATH/Controllers/Home.php on line 74.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->removerAuto()
+ 2 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/home/eduardo/sources/codeigniter/AulaCodeIgniter3C/projeto_aula/public/index.php')
+CRITICAL - 2024-07-10 12:36:24 --> TypeError: App\Controllers\Home::removerAuto(): Return value must be of type string, CodeIgniter\HTTP\RedirectResponse returned
+[Method: POST, Route: remover]
+in APPPATH/Controllers/Home.php on line 74.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->removerAuto()
+ 2 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/home/eduardo/sources/codeigniter/AulaCodeIgniter3C/projeto_aula/public/index.php')

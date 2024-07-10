@@ -18,12 +18,29 @@ foreach ($dados as $auto){
     <th>Modelo</th>
     <th>Km</th>
     <th>Preco</th>
+    <th> </th>
   </tr>
   <?php
 
 foreach ($dados as $auto){
-echo "<tr>  <td> ".$auto['codigo']. "</td>  <td>". $auto['marca']. "</td> <td>".$auto['modelo']."</td> <td>".$auto['km']." </td> <td>". $auto['preco']." </td>    </tr>";
+echo "<tr>  <td> ".$auto['codigo']. "</td>  <td>". $auto['marca']. "</td> <td>".$auto['modelo']."</td> <td>".$auto['km']." </td> <td>". $auto['preco']." </td> 
+<td>";
+?>
+
+<form method="post" action="/remover">
+<input type="hidden" name="id_removed" value="<?=$auto['codigo']?>">   
+<button type="submit"> Remover </button>
+</form>
+
+<?php
+echo "</td> </tr>";
 }
 ?>
 </table>
 
+
+<br><BR>
+<br><BR>
+<br><BR>
+<br><BR>
+<br><BR>

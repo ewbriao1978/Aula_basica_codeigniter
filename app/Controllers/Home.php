@@ -63,7 +63,14 @@ class Home extends BaseController
         $automoveis_model->insert($data);
         echo "Dados inseridos com sucesso";
 
+    }
 
+    public function removerAuto()
+    {
+        $id = $this->request->getVar('id_removed');
+        $automoveis_model = new AutomoveisModel;        
+        $automoveis_model->delete($id);
+        return redirect()->to('/listar');
     }
 
 

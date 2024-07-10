@@ -12,6 +12,12 @@ $routes->post('/recebadados','Home::recebaDados');
 $routes->get('/listar','Home::listarAutomoveis');
 $routes->get('/form_insert','Home::showFormInsert');
 $routes->post('/inserirautomoveis','Home::salvarAutomoveis');
+$routes->post('/remover','Home::removerAuto');
+
+
+
+
+
 
 
 
