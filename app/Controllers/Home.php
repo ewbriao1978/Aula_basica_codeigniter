@@ -49,7 +49,7 @@ class Home extends BaseController
         return view('form_insert');
     }
 
-    public function salvarAutomoveis() : void
+    public function salvarAutomoveis()
     {
         $data = array(
             'marca' => $this->request->getVar('marca_input'),
@@ -61,7 +61,8 @@ class Home extends BaseController
 
         $automoveis_model = new AutomoveisModel;        
         $automoveis_model->insert($data);
-        echo "Dados inseridos com sucesso";
+        $this->session->setFlashdata('success','Dados inseridos com sucesso');
+        return redirect()->to('/listar');
 
     }
 
@@ -70,6 +71,8 @@ class Home extends BaseController
         $id = $this->request->getVar('id_removed');
         $automoveis_model = new AutomoveisModel;        
         $automoveis_model->delete($id);
+        $this->session->setFlashdata('success_remove','Dados removidos com sucesso');
+
         return redirect()->to('/listar');
     }
 

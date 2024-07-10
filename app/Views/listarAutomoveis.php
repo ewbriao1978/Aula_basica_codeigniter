@@ -1,15 +1,15 @@
 <h2> Dados dos automóveis </h2>
 
 <?php
-
-foreach ($dados as $auto){
-    echo "codigo:".$auto['codigo']."<br>";
-    echo "marca:".$auto['marca']."<br>";
-    echo "modelo:".$auto['modelo']."<br>";
-    echo "km:".$auto['km']."<br>";
-    echo "preco:".$auto['preco']."<br>";
+if (session()->get('success')){
+    echo "<strong>". session()->getFlashdata('success')."</strong>";
+}
+if (session()->get('success_remove')){
+    echo "<strong>". session()->getFlashdata('success_remove')."</strong>";
 }
 ?>
+
+
 
 <table>
   <tr>
