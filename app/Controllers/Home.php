@@ -34,17 +34,14 @@ class Home extends BaseController
         return view('showformulario',$data);
     }
 
-    public function listarAutomoveis() : void
+    public function listarAutomoveis() : string
     {   
         $automoveis_model = new AutomoveisModel;
         
-        $data = $automoveis_model->findAll();
+        $data['dados'] = $automoveis_model->findAll();
 
-        print_r($data);
-
-
-        //$data['var'] = " Minha view de listagem";
-        //return view('listarAutomoveis',$data);
+        
+        return view('listarAutomoveis',$data);
     }
 
 }
