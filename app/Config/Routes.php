@@ -13,6 +13,8 @@ $routes->get('/listar','Home::listarAutomoveis');
 $routes->get('/form_insert','Home::showFormInsert');
 $routes->post('/inserirautomoveis','Home::salvarAutomoveis');
 $routes->post('/remover','Home::removerAuto');
+$routes->get('/formupdate/(:num)','Home::showFormUpdate/$1');
+$routes->post('/update','Home::updateData');
 
 
 

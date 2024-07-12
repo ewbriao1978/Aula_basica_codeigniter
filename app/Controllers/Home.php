@@ -76,5 +76,33 @@ class Home extends BaseController
         return redirect()->to('/listar');
     }
 
+    public function showFormUpdate($id_param):string{
+        $automoveis_model = new AutomoveisModel;
+        $data['dados'] = $automoveis_model->find($id_param);
+        return view('formupdate',$data);
+    }
+
+    public function updateData(){
+        $id_for_updating = $this->request->getVar('id_up');
+
+        $data = array(
+            'marca' => $this->request->getVar('marca_input'),
+            'modelo' => $this->request->getVar('modelo_input'),
+            'km' => $this->request->getVar('km_input'),
+            'ano' => $this->request->getVar('ano_input'),
+            'preco' => $this->request->getVar('preco_input')
+        );
+
+
+        $automoveis_model = new AutomoveisModel;
+        $automoveis_model->update($id_for_updating, $data);
+        $this->session->setFlashdata('success_updating','Dados atualizados com sucesso');
+
+        return redirect()->to('/listar');
+
+
+
+    }
+
 
 }

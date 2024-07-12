@@ -7,6 +7,9 @@ if (session()->get('success')){
 if (session()->get('success_remove')){
     echo "<strong>". session()->getFlashdata('success_remove')."</strong>";
 }
+if (session()->get('success_updating')){
+  echo "<strong>". session()->getFlashdata('success_updating')."</strong>";
+}
 ?>
 
 
@@ -18,6 +21,7 @@ if (session()->get('success_remove')){
     <th>Modelo</th>
     <th>Km</th>
     <th>Preco</th>
+    <th> </th>
     <th> </th>
   </tr>
   <?php
@@ -31,6 +35,13 @@ echo "<tr>  <td> ".$auto['codigo']. "</td>  <td>". $auto['marca']. "</td> <td>".
 <input type="hidden" name="id_removed" value="<?=$auto['codigo']?>">   
 <button type="submit"> Remover </button>
 </form>
+
+</td><td>
+
+<form method="get" action="/formupdate/<?=$auto['codigo']?>">
+<button type="submit"> Editar </button>
+</form>
+
 
 <?php
 echo "</td> </tr>";
